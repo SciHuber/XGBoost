@@ -1,4 +1,6 @@
 '''
+xgboost 官网
+https://xgboost.readthedocs.io/en/latest/python/python_intro.html#setting-parameters
 重复一下博客内容
 https://blog.csdn.net/sb19931201/article/details/52577592
 本文用的数据来自kaggle，相信搞机器学习的同学们都知道它，kaggle上有几个老题目一直开放，
@@ -51,6 +53,7 @@ param['seed']=1000
 param['nthread']=7
 
 '''
+这种参数设置方式也可以
 params={
 'booster':'gbtree',
 'objective': 'multi:softmax', #多分类的问题
