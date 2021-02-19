@@ -1,5 +1,10 @@
 '''
+重复一下博客内容
 https://blog.csdn.net/sb19931201/article/details/52577592
+本文用的数据来自kaggle，相信搞机器学习的同学们都知道它，kaggle上有几个老题目一直开放，
+适合给新手练级，上面还有很多老司机的方案共享以及讨论，非常方便新手入门。
+这次用的数据是Classify handwritten digits using the famous MNIST data—手写数字识别，
+每个样本相当于一个图片像素矩阵（28x28）
 '''
 
 import numpy as np
