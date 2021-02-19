@@ -83,3 +83,12 @@ watchlist = [(xgb_train, 'train'),(xgb_val, 'val')]
 model = xgb.train(plst, xgb_train, num_rounds, watchlist,early_stopping_rounds=100)
 model.save_model('./model/xgb.model') # 用于存储训练出的模型
 print "best best_ntree_limit",model.best_ntree_limit 
+
+
+preds = model.predict(xgb_test,ntree_limit=model.best_ntree_limit)
+
+np.savetxt('xgb_submission.csv',np.c_[range(1,len(tests)+1),preds],delimiter=',',header='ImageId,Label',comments='',fmt='%d')
+
+#输出运行时长
+cost_time = time.time()-start_time
+print "xgboost success!",'\n',"cost time:",cost_time,"(s)......"
